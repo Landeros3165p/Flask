@@ -1,0 +1,1502 @@
+[
+  {
+    "3D:RF:00:01::": {
+      "Name": "R1",
+      "Protocolos": ["OSPF", "STP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1, 2],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.1",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:02::": {
+      "Name": "R2",
+      "Protocolos": ["BGP", "RIP"],
+      "VLANs": {
+        "VL2": {
+          "Ports": [3, 4],
+          "Policies": ["RESTRICTED"],
+          "ET": false,
+          "IP": "192.168.10.2",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:03::": {
+      "Name": "SW1",
+      "Protocolos": ["STP", "LACP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3, 4, 5],
+          "Policies": ["VLAN_ONLY"],
+          "ET": true,
+          "IP": "192.168.10.3",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:04::": {
+      "Name": "SW2",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [6, 7, 8],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.4",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:05::": {
+      "Name": "FW1",
+      "Protocolos": ["OSPF", "BGP"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1],
+          "Policies": ["DROP_ALL"],
+          "ET": false,
+          "IP": "192.168.10.5",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:06::": {
+      "Name": "R3",
+      "Protocolos": ["EIGRP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.6",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:07::": {
+      "Name": "R4",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL2": {
+          "Ports": [2],
+          "Policies": ["ALLOW_ALL"],
+          "ET": false,
+          "IP": "192.168.10.7",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:08::": {
+      "Name": "SW3",
+      "Protocolos": ["LACP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [1, 2, 3],
+          "Policies": ["STRICT"],
+          "ET": true,
+          "IP": "192.168.10.8",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:09::": {
+      "Name": "SRV1",
+      "Protocolos": ["HTTP", "HTTPS"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["WEB_ONLY"],
+          "ET": true,
+          "IP": "192.168.10.9",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0A::": {
+      "Name": "SRV2",
+      "Protocolos": ["FTP", "SSH"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [2],
+          "Policies": ["FILE_TRANSFER"],
+          "ET": false,
+          "IP": "192.168.10.10",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0B::": {
+      "Name": "AP1",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_GUEST"],
+          "ET": true,
+          "IP": "192.168.10.11",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0C::": {
+      "Name": "AP2",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_CORP"],
+          "ET": true,
+          "IP": "192.168.10.12",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0D::": {
+      "Name": "CAM1",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [1],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.13",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0E::": {
+      "Name": "CAM2",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [2],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.14",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:0F::": {
+      "Name": "PRN1",
+      "Protocolos": ["IPP", "LPD"],
+      "VLANs": {
+        "VL15": {
+          "Ports": [1],
+          "Policies": ["PRINT_ONLY"],
+          "ET": true,
+          "IP": "192.168.10.15",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:10::": {
+      "Name": "R5",
+      "Protocolos": ["OSPF", "BGP", "MPLS"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1, 2, 3],
+          "Policies": ["CORE_ROUTING"],
+          "ET": true,
+          "IP": "192.168.10.16",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:11::": {
+      "Name": "SW4",
+      "Protocolos": ["STP", "LLDP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.17",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:12::": {
+      "Name": "SW5",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [3, 4],
+          "Policies": ["DEFAULT"],
+          "ET": false,
+          "IP": "192.168.10.18",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:13::": {
+      "Name": "PC1",
+      "Protocolos": ["DHCP", "DNS"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [5],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.19",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:14::": {
+      "Name": "PC2",
+      "Protocolos": ["DHCP", "DNS"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [6],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.20",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:15::": {
+      "Name": "PC3",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.21",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:16::": {
+      "Name": "TV1",
+      "Protocolos": ["DLNA"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["MEDIA_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.22",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:17::": {
+      "Name": "NAS1",
+      "Protocolos": ["SMB", "NFS"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1, 2],
+          "Policies": ["STORAGE_ACCESS"],
+          "ET": true,
+          "IP": "192.168.10.23",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:18::": {
+      "Name": "FW2",
+      "Protocolos": ["IPSEC", "SSL"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1],
+          "Policies": ["VPN_GATEWAY"],
+          "ET": true,
+          "IP": "192.168.10.24",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:19::": {
+      "Name": "R6",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.25",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1A::": {
+      "Name": "R7",
+      "Protocolos": ["RIPv2"],
+      "VLANs": {
+        "VL2": {
+          "Ports": [2],
+          "Policies": ["ALLOW_ALL"],
+          "ET": false,
+          "IP": "192.168.10.26",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1B::": {
+      "Name": "SW6",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.27",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1C::": {
+      "Name": "SW7",
+      "Protocolos": ["STP", "LACP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [4, 5],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.28",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1D::": {
+      "Name": "SRV3",
+      "Protocolos": ["DNS", "DHCP"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["INFRASTRUCTURE"],
+          "ET": true,
+          "IP": "192.168.10.29",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1E::": {
+      "Name": "SRV4",
+      "Protocolos": ["LDAP", "Kerberos"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [2],
+          "Policies": ["AUTH_SERVER"],
+          "ET": true,
+          "IP": "192.168.10.30",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:1F::": {
+      "Name": "AP3",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_GUEST"],
+          "ET": false,
+          "IP": "192.168.10.31",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:20::": {
+      "Name": "CAM3",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [1],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.32",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:21::": {
+      "Name": "CAM4",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [2],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.33",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:22::": {
+      "Name": "PC4",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.34",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:23::": {
+      "Name": "PC5",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [2],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.35",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:24::": {
+      "Name": "PC6",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.36",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:25::": {
+      "Name": "R8",
+      "Protocolos": ["OSPF", "BGP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1, 2],
+          "Policies": ["WAN_ROUTER"],
+          "ET": true,
+          "IP": "192.168.10.37",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:26::": {
+      "Name": "SW8",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3, 4],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.38",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:27::": {
+      "Name": "SRV5",
+      "Protocolos": ["SMTP", "IMAP"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["MAIL_SERVER"],
+          "ET": true,
+          "IP": "192.168.10.39",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:28::": {
+      "Name": "PRN2",
+      "Protocolos": ["RAW"],
+      "VLANs": {
+        "VL15": {
+          "Ports": [1],
+          "Policies": ["PRINT_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.40",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:29::": {
+      "Name": "R9",
+      "Protocolos": ["EIGRP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.41",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2A::": {
+      "Name": "SW9",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": false,
+          "IP": "192.168.10.42",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2B::": {
+      "Name": "PC7",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [3],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.43",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2C::": {
+      "Name": "PC8",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.44",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2D::": {
+      "Name": "FW3",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1, 2],
+          "Policies": ["STRICT_FIREWALL"],
+          "ET": true,
+          "IP": "192.168.10.45",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2E::": {
+      "Name": "SRV6",
+      "Protocolos": ["SQL", "HTTPS"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["DATABASE_SERVER"],
+          "ET": true,
+          "IP": "192.168.10.46",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:2F::": {
+      "Name": "AP4",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_CORP"],
+          "ET": true,
+          "IP": "192.168.10.47",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:30::": {
+      "Name": "CAM5",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [1],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.48",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:31::": {
+      "Name": "R10",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.49",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:32::": {
+      "Name": "SW10",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3, 4, 5, 6],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.50",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:33::": {
+      "Name": "PC9",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.51",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:34::": {
+      "Name": "PC10",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [2],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.52",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:35::": {
+      "Name": "SRV7",
+      "Protocolos": ["NTP", "SNMP"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["MANAGEMENT"],
+          "ET": true,
+          "IP": "192.168.10.53",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:36::": {
+      "Name": "R11",
+      "Protocolos": ["BGP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.54",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:37::": {
+      "Name": "SW11",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": false,
+          "IP": "192.168.10.55",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:38::": {
+      "Name": "PC11",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [3],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.56",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:39::": {
+      "Name": "PC12",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.57",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3A::": {
+      "Name": "PRN3",
+      "Protocolos": ["RAW"],
+      "VLANs": {
+        "VL15": {
+          "Ports": [1],
+          "Policies": ["PRINT_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.58",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3B::": {
+      "Name": "R12",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.59",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3C::": {
+      "Name": "SW12",
+      "Protocolos": ["STP", "LACP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [1, 2, 3],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.60",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3D::": {
+      "Name": "SRV8",
+      "Protocolos": ["DOCKER", "K8S"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["CONTAINER_HOST"],
+          "ET": true,
+          "IP": "192.168.10.61",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3E::": {
+      "Name": "FW4",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1],
+          "Policies": ["BLOCK_MALWARE"],
+          "ET": true,
+          "IP": "192.168.10.62",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:3F::": {
+      "Name": "AP5",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_GUEST"],
+          "ET": false,
+          "IP": "192.168.10.63",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:40::": {
+      "Name": "CAM6",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [1],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.64",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:41::": {
+      "Name": "PC13",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.65",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:42::": {
+      "Name": "PC14",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [2],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.66",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:43::": {
+      "Name": "R13",
+      "Protocolos": ["RIPv2"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": false,
+          "IP": "192.168.10.67",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:44::": {
+      "Name": "SW13",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.68",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:45::": {
+      "Name": "SRV9",
+      "Protocolos": ["HTTPS"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["WEB_APP"],
+          "ET": true,
+          "IP": "192.168.10.69",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:46::": {
+      "Name": "PC15",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.70",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:47::": {
+      "Name": "R14",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.71",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:48::": {
+      "Name": "SW14",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": false,
+          "IP": "192.168.10.72",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:49::": {
+      "Name": "PC16",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [3],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.73",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4A::": {
+      "Name": "PC17",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.74",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4B::": {
+      "Name": "PRN4",
+      "Protocolos": ["IPP"],
+      "VLANs": {
+        "VL15": {
+          "Ports": [1],
+          "Policies": ["PRINT_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.75",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4C::": {
+      "Name": "R15",
+      "Protocolos": ["EIGRP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.76",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4D::": {
+      "Name": "SW15",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3, 4],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.77",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4E::": {
+      "Name": "SRV10",
+      "Protocolos": ["SYSLOG"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["LOG_SERVER"],
+          "ET": true,
+          "IP": "192.168.10.78",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:4F::": {
+      "Name": "FW5",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1],
+          "Policies": ["BLOCK_ALL"],
+          "ET": true,
+          "IP": "192.168.10.79",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:50::": {
+      "Name": "AP6",
+      "Protocolos": ["CAPWAP"],
+      "VLANs": {
+        "VL50": {
+          "Ports": [1],
+          "Policies": ["WIFI_CORP"],
+          "ET": true,
+          "IP": "192.168.10.80",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:51::": {
+      "Name": "CAM7",
+      "Protocolos": ["RTSP"],
+      "VLANs": {
+        "VL60": {
+          "Ports": [1],
+          "Policies": ["STREAM_ONLY"],
+          "ET": false,
+          "IP": "192.168.10.81",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:52::": {
+      "Name": "PC18",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.82",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:53::": {
+      "Name": "PC19",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [2],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.83",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:54::": {
+      "Name": "R16",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.84",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:55::": {
+      "Name": "SW16",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [1, 2, 3],
+          "Policies": ["DEFAULT"],
+          "ET": false,
+          "IP": "192.168.10.85",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:56::": {
+      "Name": "PC20",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.86",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:57::": {
+      "Name": "PC21",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL20": {
+          "Ports": [5],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.87",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:58::": {
+      "Name": "R17",
+      "Protocolos": ["BGP"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.88",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:59::": {
+      "Name": "SW17",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.89",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5A::": {
+      "Name": "SRV11",
+      "Protocolos": ["MQTT"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["IOT_BROKER"],
+          "ET": true,
+          "IP": "192.168.10.90",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5B::": {
+      "Name": "PC22",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [3],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.91",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5C::": {
+      "Name": "PC23",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.92",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5D::": {
+      "Name": "R18",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.93",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5E::": {
+      "Name": "SW18",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [1, 2],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.94",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:5F::": {
+      "Name": "PC24",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [3],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.95",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:60::": {
+      "Name": "PC25",
+      "Protocolos": ["DHCP"],
+      "VLANs": {
+        "VL30": {
+          "Ports": [4],
+          "Policies": ["USER_ACCESS"],
+          "ET": false,
+          "IP": "192.168.10.96",
+          "SSH": false
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:61::": {
+      "Name": "FW6",
+      "Protocolos": ["OSPF", "BGP"],
+      "VLANs": {
+        "VL99": {
+          "Ports": [1, 2],
+          "Policies": ["EDGE_FIREWALL"],
+          "ET": true,
+          "IP": "192.168.10.97",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:62::": {
+      "Name": "SRV12",
+      "Protocolos": ["HTTPS", "SSH"],
+      "VLANs": {
+        "VL100": {
+          "Ports": [1],
+          "Policies": ["DEV_SERVER"],
+          "ET": true,
+          "IP": "192.168.10.98",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:63::": {
+      "Name": "R19",
+      "Protocolos": ["OSPF"],
+      "VLANs": {
+        "VL1": {
+          "Ports": [1],
+          "Policies": ["ALLOW_ALL"],
+          "ET": true,
+          "IP": "192.168.10.99",
+          "SSH": true
+        }
+      }
+    }
+  },
+  {
+    "3D:RF:00:64::": {
+      "Name": "SW19",
+      "Protocolos": ["STP"],
+      "VLANs": {
+        "VL10": {
+          "Ports": [1, 2, 3, 4, 5],
+          "Policies": ["DEFAULT"],
+          "ET": true,
+          "IP": "192.168.10.100",
+          "SSH": true
+        }
+      }
+    }
+  }
+]
